@@ -1,0 +1,542 @@
+body {
+    margin: 0px;
+    font-family: "Libre Franklin", sans-serif;
+    color: white;
+}
+
+a {
+    cursor: pointer;
+}
+ul {
+    padding: 0px;
+}
+nav {
+    background-color: #141414;
+    width: 100vw;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image:url("home.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-size: 2em;
+}
+
+#login_window{
+    background-color: rgba(24, 24, 24, 0.8);
+    border-radius: 10px;
+    padding: 10px 40px;
+}
+#login_window a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1rem;
+}
+#nav-button-wrapper {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    list-style: none;
+    padding: 8px; 
+    margin: 0px;
+}
+.nav-button{
+    color: lightgrey;
+    font-weight: bold;
+    padding: 8px;
+}
+.nav-button a{
+    color: inherit;
+    text-decoration: none;
+}
+.nav-button:hover {
+    transform:scale(1.2);
+    color: whitesmoke;
+}
+.nav-button img {
+    height: 64px;
+}
+.login_label_text{
+    font-size: 0.5em;
+    font-weight: bold;
+}
+.login_label{
+    width: 256px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.exercise_label_text{
+    font-size: 0.5em;
+    font-weight: bold;
+}
+.exercise_label{
+    width: 10%;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.submit_button{
+    background-color: darkslateblue;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.submit_button:hover{
+    background-color: rgb(57, 47, 119);
+    transform: scale(1.05);
+}
+.big_container{
+    display: flex;
+}
+.big_container section{
+    background-image: none;
+    background-color: #222222;
+    display: flex;
+    width: 100%;
+    align-items: normal;
+    flex-direction: column;
+}
+.big_container nav{
+    width: auto;
+}
+.big_container #nav-button-wrapper{
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 5px 10px;
+}
+.header img{
+    height: 64px;
+}
+.profile_container{
+    height: 64px;
+    width: 64px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.profile_container img {
+    height: 100%;
+    width: 100%;
+}
+.sub_header{
+    display: flex;
+    align-items: center;
+}
+#main_section{
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+footer{
+    background-color: #333333;
+}
+.footer-items-wrapper{
+    margin: 0px 200px;
+    display: flex;
+    flex-direction: column;
+}
+.footer-items-wrapper a{
+    text-decoration: none;
+    color: inherit;
+}
+.privacy-wrapper{
+    background: #141414;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 80%;
+    margin: 20px;
+    max-height: fit-content;
+    text-align: center;
+    font-size: 1rem;
+}
+.calendar-wrapper {
+    background: #141414;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    width: 100%;
+    margin: 20px;
+    max-height: fit-content;
+    text-align: center;
+}
+.no-space-around{
+    justify-content: flex-start;
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.calendar-days,
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 1rem;
+    text-align: center;
+    gap: 5px;
+}
+
+.calendar-days div {
+    font-weight: bold;
+    background-color: #222222;
+    padding: 8px 0;
+}
+
+.calendar-grid div {
+    padding: 10px 0;
+    background-color: #222222;
+    border: 1px solid #ddd;
+    border-radius: 5px; 
+}
+.calendar-grid div.selected {
+    background-color: rgb(66, 6, 66);
+    color: inherit;
+    border: 2px solid #339af0;
+    font-weight: bold;     
+}
+.calendar-grid div.today {
+    color: green;
+    font-weight: bold;
+}
+#trainings-wrapper{
+    height: 90%;
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #141414;
+}
+.trainings-display{
+    display: flex;
+    list-style: none;
+}
+.training-headers{
+    border-bottom: 1px solid #222222;
+    text-align: center;
+    width: 16.667%;
+    flex-grow: 1;
+}
+.training-detail{
+    display: flex;
+    border-bottom: 1px solid #222222;
+    padding-bottom: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 16.667%;
+    font-size: 0.7em;
+    flex-grow: 1;
+}
+.workout-headers{
+    border-bottom: 1px solid #222222;
+    text-align: center;
+    width: 12.5%;
+    flex-grow: 1;
+}
+.workout-detail {
+    border-bottom: 1px solid #222222;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 12.5%;
+    font-size: 0.7em;
+    flex-grow: 1;
+}
+.workout-detail-button{
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+}
+.workout-detail-button:hover{
+    transform: scale(1.1);
+}
+.button-back{
+    all: unset;
+    cursor: pointer;
+    background-color: #141414;
+    margin: 5px 20px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.position-relative {
+    position: relative;
+}
+.no-absolute{
+    position: static !important;
+}
+.no-justify{
+    justify-content: flex-start;
+}
+.add-workout-button{
+    all: unset;
+    cursor: pointer;
+    background-color: #141414;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 35px;
+    right: 40px;
+}
+.add-workout-button:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+.workout-form {
+    display: flex;
+    flex-direction: row;
+}
+.form-fields{
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    color: white;
+    align-items: flex-start;
+    gap: 10px;
+}
+.hidden {
+    display: none;
+}
+#buttons-wrapper{
+    display: flex;
+    position: absolute;
+    left: 190px;
+    top: 130px;
+}
+.send-friendship-button{
+    all: unset;
+    cursor: pointer;
+    background-color: #141414;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.notification{
+    display: flex;
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+}
+.notification img{
+    width: 64px;
+    height: 64px;
+}
+#notifications-wrapper{
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    position: absolute;
+    width: 300px;
+    max-height: fit-content;
+    border: #141414 3px solid;
+    border-radius: 20px;
+    top: 20px;
+    right: 140px;
+    background-color: #222222;
+}
+#notification-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#notifications-number{
+    background: rgb(150, 9, 9);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    font-size: 1rem;
+    text-align: center;
+    top: 20px;
+    right: 110px;
+}
+#mobile-menu-toggle {
+    display: none;
+}
+@media(min-width: 320px) and (max-width: 640px) {
+    #mobile-menu-toggle {
+        display: block;
+        background-color: #141414;
+        border: none;
+        font-size: 0.75rem;
+        color: white;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+
+    .big_container #nav-button-wrapper {
+        display: none;
+    }
+
+    .show {
+        display: flex !important; 
+        flex-direction: column;
+        background-color: #141414;
+        width: 100%;
+    }
+
+    .nav-button {
+        padding: 15px 20px;
+        border-top: 1px solid #222;
+    }
+
+    #main_section {
+        flex-direction: column;
+    }
+    #trainings-wrapper {
+        width: calc(100% - 80px);
+        font-size: 1rem;
+    }
+    #trainings-wrapper .profile_container{
+        height: 16px;
+        width: 16px;
+    }
+    .calendar-wrapper {
+        margin: 10px;
+        width: calc(80% - 20px);
+    }
+
+    #buttons-wrapper {
+        position: static;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .add-workout-button {
+        position: static;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}
+@media(min-width: 640px) and (max-width: 768px) {
+    #mobile-menu-toggle {
+        display: block;
+        background-color: #141414;
+        border: none;
+        font-size: 1rem;
+        color: white;
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+
+    .big_container #nav-button-wrapper {
+        display: none;
+    }
+
+    .show {
+        display: flex !important; 
+        flex-direction: column;
+        background-color: #141414;
+        width: 100%;
+    }
+
+    .nav-button {
+        padding: 15px 20px;
+        border-top: 1px solid #222;
+    }
+
+    #main_section {
+        flex-direction: column;
+    }
+
+    .calendar-wrapper {
+        margin: 10px;
+        width: calc(80% - 20px);
+    }
+
+    #buttons-wrapper {
+        position: static;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .add-workout-button {
+        position: static;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+    #trainings-wrapper{
+        width: calc(100% - 80px);
+        font-size: 1rem;
+    }
+    #trainings-wrapper .profile_container{
+        height: 32px;
+        width: 32px;
+    }
+}
+@media(min-width: 768px) and (max-width: 1280px){
+    #trainings-wrapper {
+        width: calc(100% - 80px);
+        font-size: 1.25rem;
+    }
+    #mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        padding: 10px 20px;
+    }
+
+    .big_container #nav-button-wrapper {
+        display: none;
+    }
+
+    .show {
+        display: flex !important; 
+        flex-direction: column;
+        background-color: #141414;
+        width: 100%;
+    }
+
+    .nav-button {
+        padding: 15px 20px;
+        border-top: 1px solid #222;
+    }
+
+    #main_section {
+        flex-direction: column;
+    }
+    .calendar-wrapper {
+        margin: 10px;
+        width: calc(80% - 20px);
+    }
+
+    #buttons-wrapper {
+        position: static;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .add-workout-button {
+        position: static;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+}
